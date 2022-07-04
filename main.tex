@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage[top=5mm,includehead,headheight=63pt, left=2.5cm,bottom=2.5cm,right=2.5cm,headsep=0.3cm]{geometry} 
+\usepackage{fontspec}
+\setmainfont[
+ Path = fonts/,
+ BoldFont={Veleka-Bold.otf}, 
+ ItalicFont={Veleka-Italic.otf},
+ BoldItalicFont={Veleka-BoldItalic.otf}
+ ]{Veleka-Regular.otf}
+
+
+%% bibliography packages
+\usepackage{biblatex} 
+\addbibresource{biblo.bib} 
+
+%%charset packages
+\usepackage[utf8]{inputenc}
+\usepackage[english,bulgarian]{babel}
+\usepackage{textgreek}
+\usepackage{textcomp}
+\usepackage[T2A]{fontenc}
+
+%% hyperlinks
+\usepackage{hyperref}
+\usepackage{url}[hyphens]
+
+%% graphics packages
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\graphicspath{{imgs/}}
+\usepackage{float}
+
+
+
+
+%%Autoref language settings begin
+\renewcommand*{\figureautorefname}{Фиг.}
+\renewcommand*{\equationautorefname}{Уравн.}
+\renewcommand*{\subsectionautorefname}{Пар.}
+\renewcommand*{\subsubsectionautorefname}{\subsectionautorefname}
+\newcommand{\subfigureautorefname}{\figureautorefname}
+%%Autoref language settings end
+
+%%other
+\usepackage[inline]{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{breqn}
+\allowdisplaybreaks
+\usepackage{fancyhdr}
+\usepackage{afterpage}
+\usepackage{listings}
+\lstloadlanguages{[5.2]Mathematica}
+
+
+\title{Капилярни мостове с цилиндрична симетрия}
+\author{Васил Иванов}
+\date{\today}
+
+%%header definitions
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\includegraphics[width=0.1\linewidth]{su-logo.png}}
+\chead{СОФИЙСКИ УНИВЕРСИТЕТ „Св. КЛИМЕНТ ОХРИДСКИ”\\Факултет по химия и фармация}
+\fancyfoot[C]{\ifnum\thepage<2\relax\else\thepage\fi}
+%%end header definitions
+
+\begin{document}
+\include{title.tex}
+\tableofcontents
+\include{intro.tex}
+\include{mechanics.tex}
+\include{thermodynamics.tex}
+\include{conclusion.tex}
+%%begin no cites
+\nocite{thesis_source}
+\nocite{tsekov_drop}
+\nocite{tsekov_drop_2}
+\nocite{danov_ivanov_films}
+\nocite{rusanov_thin_films}
+\nocite{rusanov_shchekin_2}
+\nocite{rusanov_3}
+%%end 
+\printbibliography
+\end{document}

@@ -1,0 +1,7 @@
+Plot[1/c^2 ((6 (2 - c) ArcTanh[1 - c])/(1 - c) - (
+    64 - 128 c + 100 c^2 - 36 c^3 + 6 c^4)/((2 - c)^3 c^2)), {c, 0, 
+  1}, FrameLabel -> {Style[Subscript[a, c], 40], 
+   Style[OverTilde[f], 40]}, PlotTheme -> "Scientific", 
+ PerformanceGoal -> "Quality", 
+ PlotStyle -> {Black, Thickness[0.002]}, 
+ FrameStyle -> Directive[Black, 30], ImageSize -> Full]
