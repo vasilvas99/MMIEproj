@@ -18,10 +18,10 @@
 	\item $\rho_{i}$  - плътност на материала
 \end{itemize}
 
-Наложено е и следното прекъснато начално условие
+Наложено е следното прекъснато начално условие:
 \begin{align}
 	u_{1}(x, t = 0) & = 0, -\infty < x < 0  \\
-	u_{2}(x, t = 0) & = u_0, 0 < x < \infty 
+	u_{2}(x, t = 0) & = u_0, 0 0 < x < \infty 
 \end{align}
 
 Както и гранични условия ,,на безкрайност``:
@@ -36,12 +36,12 @@
 	k_{1}\frac{\partial u_1}{\partial x} (0, t) & = k_{2}\frac{\partial u_2}{\partial x} (0, t), t > 0 
 \end{align}
 
-Дефинираме и ,,помощна константа`` $\beta$ с цел олекотяване на записа:
+Дефинираме ,,помощна константа`` $\beta$ с цел олекотяване на записа:
 \begin{equation*}
 	\beta = \frac{\sqrt{k_2 \rho_2 c_2}}{\sqrt{k_1 \rho_1 c_1}}
 \end{equation*}
 
-За така поставената задача е известно и точното (аналитично решение):
+За така поставената задача е известно точното (аналитично решение):
 \begin{align}
 	u_{1}(x, t) & = \frac{\beta u_0}{1+\beta} \left[1 + \erf{\left(\frac{2}{2\sqrt{\kappa_1 t}}\right)}\right] \\
 	u_{2}(x, t) & = \frac{u_0}{1+\beta} \left[\beta + \erf{\left(\frac{2}{2\sqrt{\kappa_2 t}}\right)}\right]   
