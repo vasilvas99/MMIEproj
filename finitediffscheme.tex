@@ -7,14 +7,14 @@
     u(x)=
         \begin{cases}
             u_1(x) & \text{ако } x \in (-\infty, 0)\\
-            u_2(x) & \text{ако } x \in [0, \infty)
+            u_2(x) & \text{ако } x \in [0, +\infty)
         \end{cases}
 \end{equation}
 Приближеното решение за $u(x)$ в точката $(x_i, t_j)$ от мрежата ще бележим с $y_{i}^{j}$. ,,Безкрайността`` ще апроксимираме с т.нар. ,,актуална безкрайност``, т.е. ще разглеждаме достатъчно голям интервал $[-M, M]$, за някое положително число $M$.
 
 \noindent Въвеждаме мрежата:
 \begin{equation*}
-    \omega_{h, \tau } = \left\{ (x_i, t_j):  x_i = -M + i h, t_j = j \tau; i = \overline{0,2n}, j = \overline{0,m};  n = \left\lceil \frac{2M}{h} \right\rceil, m =\left\lceil \frac{T}{\tau} \right\rceil \right\}
+    \omega_{h, \tau } = \left\{ (x_i, t_j):  x_i = -M + (i-1) h, t_j = (j-1) \tau; i = \overline{1,2n+1}, j = \overline{1,m+1};  n = \left\lceil \frac{2M}{h} \right\rceil, m =\left\lceil \frac{T}{\tau} \right\rceil \right\}
 \end{equation*}
 
 \noindent Условията за устойчивост на схемата (т.е за $h$ и $\tau$) ще определим след малко.
@@ -36,9 +36,33 @@
 За целта ще се върнем към оригиналната дефиниция на задачата и като начало ще апроксираме производните в условието за идеален контакт с формула с  грешка $O(h+\tau)$ като начало:
 \begin{align*}
     \frac{\partial u_1}{\partial x} (0, t) &= \frac{k_2}{k_1} \frac{\partial u_2}{\partial x} (0, t) \\
-    \phi_{n+1}^{j+1} &= \psi_{n+1}^{j+1} \\
-    \frac{\phi_{2}^{j+1} - \phi_{1}^{j+1}}{h} &=  \frac{k_2}{k_1} \frac{\psi_{2n}^{j+1} - \psi_{2n-1}^{j+1}}{h} \\
+    \phi_{n+1}^{j} &= \psi_{n+1}^{j} \\
+    \frac{\phi_{n+1}^{j} - \phi_{n}^{j}}{h} &=  \frac{k_2}{k_1} \frac{\psi_{n+2}^{j} - \psi_{n+1}^{j}}{h}
 \end{align*}
 Където $\phi_i^j$ и $\psi_i^j$ са съотвените приближени решения за $u_1(x,t)$ и $u_2(x,t)$.
 За безизточниковото уравнение на дифузията при дифузионен коефициент \textbf{1}, лесно се показва (чрез развиване в ред на Тейлър) и допускане, че основното диференциално уравнение
 е изпълнено с достатъчно добра точност и върху границите (съображения за гладкост на решението), че трябва от лявата страна на горното диференчно уравнение да извадим $\frac{\partial u_1}{\partial t}$, a от дясната: $-\frac{k_2}{k_1}\frac{\partial u_2}{\partial t}$.
+Дискертизираме производните по времето в тези допълнителни членове с формулата с разлика напред и получаваме:
+\begin{align*}
+    \phi_{n+1}^{j} &= \psi_{n+1}^{j} \\
+    \left(\frac{\phi_{n+1}^{j} - \phi_{n}^{j}}{h} - \frac{\phi_{n+1}^{j+1}-\phi_{n+1}^{j}}{\tau}\right) &=  \frac{k_2}{k_1} \left(\frac{\psi_{n+2}^{j} - \psi_{n+1}^{j}}{h} + \frac{ \psi_{n+1}^{j+1}-\psi_{n+1}^{j}}{\tau}\right)
+\end{align*}
+С помощта на системата \textit{Mathematica} извършваме необходимите алгебрични преобразувания и се връщаме към нотацията на ,,общо`` приближено решение $y_i^j$:
+\begin{equation}
+    y_{n+1}^{j+1} = \frac{2 \tau}{h^2} \frac{k_1 \kappa_1 \kappa_2 }{\kappa_2 k_1 + \kappa_1 k_2} y_{n+1}^j + \left( 1 - \frac{2 \tau}{h^2}  \frac{(k_1 + k_2) \kappa_1 \kappa_2 }{\kappa_2 k_1 + \kappa_1 k_2} \right) y_{n+1}^j + \frac{2 \tau}{h^2} \frac{k_2 \kappa_1 \kappa_2 }{\kappa_2 k_1 + \kappa_1 k_2} y_{n+2}^j
+\end{equation}
+Горното е за $j > 1$, т.е. за слоеве по времето след първия (определен от началното условие).
+Тогава можем да обобщим всички разсъждения дотук в следната диференчна схема, с която ще получаваме приближеното решение на задачата:
+\begin{align*}
+    y_i^1 &= 0, i = \overline{1,n} \\
+    y_i^{1} &= u_0, i = \overline{n+1, 2n+1} \\
+    \\
+    За j &= \overline{2,m+1}: \\
+    y_{i}^{j+1} &= \left(1-\frac{2 \tau \kappa_1}{h^2}\right)y_{i}^j + \frac{\tau \kappa_1}{h^2}\left(y_{i-1}^j + y_{i+1}^j\right);  i  = \overline{2, n} \\
+    y_{n+1}^{j+1} &= \frac{2 \tau}{h^2} \frac{k_1 \kappa_1 \kappa_2 }{\kappa_2 k_1 + \kappa_1 k_2} y_{n+1}^j + \left( 1 - \frac{2 \tau}{h^2}  \frac{(k_1 + k_2) \kappa_1 \kappa_2 }{\kappa_2 k_1 + \kappa_1 k_2} \right) y_{n+1}^j + \frac{2 \tau}{h^2} \frac{k_2 \kappa_1 \kappa_2 }{\kappa_2 k_1 + \kappa_1 k_2} y_{n+2}^j \\
+    y_{i}^{j+1} &= \left(1-\frac{2 \tau \kappa_2}{h^2}\right)y_{i}^j + \frac{\tau \kappa_2}{h^2}\left(y_{i-1}^j + y_{i+1}^j\right);  i  = \overline{n+2, 2n} \\
+    y_{1}^{j+1} &= 0  \\
+    y_{2n+1}^{j+1} &= u_0 \\
+\end{align*}
+
+Така написаната диференчна схема може директно да бъде инплементирана например в \textit{Mathematica}. Кодът използван за следващите числени експерименти може да бъден намерен във файла \textit{mmieproj-code.nb}.
