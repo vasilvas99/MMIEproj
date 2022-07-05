@@ -14,7 +14,7 @@
 
 \noindent Въвеждаме мрежата:
 \begin{equation*}
-    \omega_{h, \tau } = \left\{ (x_i, t_j):  x_i = -M + i h, t_j = j \tau; i = \overline{0,2n}, j = \overline{0,m};  n = \lceil \frac{2M}{h} \rceil, m =\lceil \frac{T}{\tau} \rceil \right\}
+    \omega_{h, \tau } = \left\{ (x_i, t_j):  x_i = -M + i h, t_j = j \tau; i = \overline{0,2n}, j = \overline{0,m};  n = \left\lceil \frac{2M}{h} \right\rceil, m =\left\lceil \frac{T}{\tau} \right\rceil \right\}
 \end{equation*}
 
 \noindent Условията за устойчивост на схемата (т.е за $h$ и $\tau$) ще определим след малко.
@@ -29,6 +29,6 @@
 На база тези две диференчни уравнения ще получим и условията за устойчивост на схемата. Избираме:
 \begin{align*}
     \tau &< \frac{h^2}{2 d}\\
-    d &= max \left(\kappa_1, \kappa_2\right)
+    d &:= max \left\{\kappa_1, \kappa_2 \right\}
 \end{align*}
 Остава да апроксираме с втори ред на точност задачата и в особената точка.
