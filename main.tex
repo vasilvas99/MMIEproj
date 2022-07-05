@@ -30,6 +30,7 @@
 \usepackage{subfigure}
 \graphicspath{{imgs/}}
 \usepackage{float}
+\usepackage{xcolor}
 
 
 
@@ -40,6 +41,8 @@
 \renewcommand*{\subsectionautorefname}{Пар.}
 \renewcommand*{\subsubsectionautorefname}{\subsectionautorefname}
 \newcommand{\subfigureautorefname}{\figureautorefname}
+\definecolor{comment}{rgb}{0.271,0.580,0.682}
+
 %%Autoref language settings end
 
 %%other
@@ -70,4 +73,7 @@
 \include{title.tex}
 \include{theory.tex}
 \include{finitediffscheme.tex}
+\include{numericalexperiments.tex}
+\nocite{repo}
+\printbibliography
 \end{document}
