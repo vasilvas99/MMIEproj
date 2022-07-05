@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    145997,       2617]
-NotebookOptionsPosition[    144515,       2588]
-NotebookOutlinePosition[    144887,       2604]
-CellTagsIndexPosition[    144844,       2601]
+NotebookDataLength[    183392,       3474]
+NotebookOptionsPosition[    178178,       3392]
+NotebookOutlinePosition[    178549,       3408]
+CellTagsIndexPosition[    178506,       3405]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -294,7 +294,7 @@ Cell[BoxData[
    3.8631843244654713`*^9}, {3.863196716291938*^9, 3.863196721094406*^9}, {
    3.863196764349923*^9, 3.863196799069544*^9}, {3.863196835109728*^9, 
    3.863196873380032*^9}, {3.863196911196888*^9, 3.863196932042221*^9}},
- CellLabel->"In[2]:=",ExpressionUUID->"40277687-c645-4ce0-b8c3-de288b0d64e5"],
+ CellLabel->"In[22]:=",ExpressionUUID->"40277687-c645-4ce0-b8c3-de288b0d64e5"],
 
 Cell[BoxData[
  RowBox[{
@@ -358,7 +358,7 @@ Cell[BoxData[
    3.86317961429669*^9, 3.863179614433055*^9}, {3.863182604444737*^9, 
    3.863182607241529*^9}, {3.863182716147407*^9, 3.863182716313068*^9}, 
    3.863196817155624*^9, {3.863236176278455*^9, 3.863236176371703*^9}},
- CellLabel->"In[3]:=",ExpressionUUID->"e7fd83da-bb04-411a-9a6f-2ebcbeb4a763"],
+ CellLabel->"In[23]:=",ExpressionUUID->"e7fd83da-bb04-411a-9a6f-2ebcbeb4a763"],
 
 Cell[TextData[Cell[BoxData[
  GraphicsBox[
@@ -2089,7 +2089,7 @@ Cell[BoxData[{
   3.863183186437696*^9}, {3.863183517725625*^9, 3.863183566311089*^9}, {
   3.86318359997789*^9, 3.8631836077652693`*^9}, {3.863183920591799*^9, 
   3.8631839218258343`*^9}, {3.8631969572012577`*^9, 3.8631969670969*^9}},
- CellLabel->"In[4]:=",ExpressionUUID->"625ec117-9082-4ef4-abd8-712ea5b44329"],
+ CellLabel->"In[24]:=",ExpressionUUID->"625ec117-9082-4ef4-abd8-712ea5b44329"],
 
 Cell[BoxData[
  RowBox[{
@@ -2101,7 +2101,9 @@ Cell[BoxData[
    RowBox[{"Module", "[", 
     RowBox[{
      RowBox[{"{", 
-      RowBox[{"m1", ",", "error", ",", " ", "errorPlot"}], "}"}], ",", 
+      RowBox[{
+      "m1", ",", "err", ",", " ", "errorPlot", ",", "t", ",", "x", ",", 
+       "\[Xi]"}], "}"}], ",", 
      RowBox[{
       RowBox[{
        RowBox[{"{", 
@@ -2194,7 +2196,7 @@ Cell[BoxData[
       RowBox[{
       "Print", "[", "\"\<Calculations done, generating error plots\>\"", 
        "]"}], ";", "\[IndentingNewLine]", 
-      RowBox[{"error", " ", "=", " ", 
+      RowBox[{"err", " ", "=", " ", 
        RowBox[{"ParallelTable", "[", 
         RowBox[{
          RowBox[{"{", 
@@ -2227,8 +2229,8 @@ Cell[BoxData[
          RowBox[{"ListPlot", "[", 
           RowBox[{
            RowBox[{
-           "error", "\[LeftDoubleBracket]", "j", "\[RightDoubleBracket]"}], 
-           ",", " ", 
+           "err", "\[LeftDoubleBracket]", "j", "\[RightDoubleBracket]"}], ",",
+            " ", 
            RowBox[{"AxesLabel", "\[Rule]", 
             RowBox[{"{", 
              RowBox[{
@@ -2238,10 +2240,17 @@ Cell[BoxData[
             RowBox[{"{", 
              RowBox[{"0", ",", " ", 
               RowBox[{"Max", "[", 
-               RowBox[{"error", "[", 
+               RowBox[{"err", "[", 
                 RowBox[{"[", 
                  RowBox[{"All", ",", "All", ",", "2"}], "]"}], "]"}], "]"}]}],
-              "}"}]}]}], "]"}], ",", " ", 
+              "}"}]}], ",", 
+           RowBox[{"PlotLabel", "\[Rule]", " ", 
+            RowBox[{"\"\<t = \>\"", " ", "<>", " ", 
+             RowBox[{"ToString", "[", 
+              RowBox[{
+              "t", "\[LeftDoubleBracket]", "j", "\[RightDoubleBracket]"}], 
+              "]"}], " ", "<>", " ", "\"\< s \\n\>\""}]}]}], "]"}], ",", " ", 
+         
          RowBox[{"{", 
           RowBox[{"j", ",", "2", ",", 
            RowBox[{
@@ -2268,37 +2277,42 @@ Cell[BoxData[
    3.8660391873336897`*^9, 3.8660392894730773`*^9}, {3.866039324294166*^9, 
    3.866039344414315*^9}, {3.8660394015732536`*^9, 3.8660394212542663`*^9}, {
    3.8660394753079386`*^9, 3.866039558517024*^9}, {3.8660395892393603`*^9, 
-   3.8660397344140825`*^9}},
- CellLabel->
-  "In[596]:=",ExpressionUUID->"de845ac5-083c-4567-b3ff-f0a155014b14"],
+   3.8660397344140825`*^9}, {3.866041071205798*^9, 3.8660410754833984`*^9}, {
+   3.866041362922167*^9, 3.8660413653453507`*^9}, {3.8660424100004597`*^9, 
+   3.8660424366898375`*^9}, {3.866046282556772*^9, 3.8660462856306562`*^9}},
+ CellLabel->"In[21]:=",ExpressionUUID->"de845ac5-083c-4567-b3ff-f0a155014b14"],
 
 Cell[CellGroupData[{
 
-Cell[BoxData[{
+Cell[BoxData[
  RowBox[{
-  RowBox[{"u0", "=", "100"}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"Xmax", " ", "=", "50"}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"h", " ", "=", " ", "0.1"}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"T", "=", "20"}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"material1", " ", "=", " ", "\"\<Copper\>\""}], 
-  ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"material2", " ", "=", " ", "\"\<Copper\>\""}], 
-  ";"}], "\[IndentingNewLine]", 
- RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Copper", "-", 
+    RowBox[{"Copper", " ", "contact"}]}], "*)"}], "\[IndentingNewLine]", 
   RowBox[{
-   RowBox[{"{", 
-    RowBox[{"m1", ",", "errorPlt"}], "}"}], "=", 
-   RowBox[{"getVisualization", "[", 
+   RowBox[{
+    RowBox[{"u0cc", "=", "100"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Xmaxcc", " ", "=", "50"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"hcc", " ", "=", " ", "0.1"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Tcc", "=", "20"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"material1cc", " ", "=", " ", "\"\<Copper\>\""}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"material2cc", " ", "=", " ", "\"\<Copper\>\""}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
     RowBox[{
-    "u0", ",", "material1", ",", " ", "material2", ",", " ", "Xmax", ",", "T",
-      ",", "h"}], "]"}]}], 
-  ";"}], "\[IndentingNewLine]", "m1", "\[IndentingNewLine]", "errorPlt"}], \
-"Input",
+     RowBox[{"{", 
+      RowBox[{"m1cc", ",", "errorPltcc"}], "}"}], "=", 
+     RowBox[{"getVisualization", "[", 
+      RowBox[{
+      "u0cc", ",", "material1cc", ",", " ", "material2cc", ",", " ", "Xmaxcc",
+        ",", "Tcc", ",", "hcc"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   "m1cc", "\[IndentingNewLine]", "errorPltcc"}]}]], "Input",
  CellChangeTimes->{{3.863167332791464*^9, 3.8631673584553213`*^9}, {
    3.863167459774472*^9, 3.863167463574819*^9}, {3.863168312883712*^9, 
    3.863168313372343*^9}, {3.863168644923777*^9, 3.8631686451056843`*^9}, {
@@ -2338,9 +2352,9 @@ Cell[BoxData[{
    3.8660374856904783`*^9, 3.8660374861373987`*^9}, {3.866038055902794*^9, 
    3.8660380684866533`*^9}, {3.866039020202881*^9, 3.866039046718054*^9}, {
    3.866039292391348*^9, 3.866039294918582*^9}, {3.866039758520131*^9, 
-   3.866039768393105*^9}},
- CellLabel->
-  "In[608]:=",ExpressionUUID->"4e55d62b-5e5d-4d58-9bf7-0a394651132e"],
+   3.866039768393105*^9}, {3.8660399578773365`*^9, 3.8660399626375055`*^9}, {
+   3.8660463038212667`*^9, 3.8660463300472775`*^9}, 3.866046764061401*^9},
+ CellLabel->"In[27]:=",ExpressionUUID->"4e55d62b-5e5d-4d58-9bf7-0a394651132e"],
 
 Cell[CellGroupData[{
 
@@ -2381,10 +2395,14 @@ Cell[BoxData[
    3.8660391342548056`*^9}, 3.866039295237141*^9, 3.8660393498365717`*^9, {
    3.866039406184245*^9, 3.8660394259613028`*^9}, {3.8660395019603567`*^9, 
    3.8660395630362787`*^9}, {3.8660396023505774`*^9, 3.8660397386955395`*^9}, 
-   3.8660397689121175`*^9},
+   3.8660397689121175`*^9, 3.8660399724116106`*^9, 3.866041078662662*^9, 
+   3.8660412701173167`*^9, 3.8660413695347733`*^9, 3.8660421631709633`*^9, 
+   3.866042286741334*^9, 3.866042745868378*^9, 3.8660463376214647`*^9, 
+   3.8660467110076704`*^9, 3.866046840078041*^9, 3.866046918967865*^9, 
+   3.8660469816470857`*^9},
  CellLabel->
   "During evaluation of \
-In[608]:=",ExpressionUUID->"7c0b8acf-a94b-403e-a6d5-c852fb32dfaa"],
+In[27]:=",ExpressionUUID->"03c8567b-fa48-46a7-bafd-fa1258e41b0e"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -2418,10 +2436,14 @@ Cell[BoxData[
    3.8660391342548056`*^9}, 3.866039295237141*^9, 3.8660393498365717`*^9, {
    3.866039406184245*^9, 3.8660394259613028`*^9}, {3.8660395019603567`*^9, 
    3.8660395630362787`*^9}, {3.8660396023505774`*^9, 3.8660397386955395`*^9}, 
-   3.8660397689141197`*^9},
+   3.8660397689121175`*^9, 3.8660399724116106`*^9, 3.866041078662662*^9, 
+   3.8660412701173167`*^9, 3.8660413695347733`*^9, 3.8660421631709633`*^9, 
+   3.866042286741334*^9, 3.866042745868378*^9, 3.8660463376214647`*^9, 
+   3.8660467110076704`*^9, 3.866046840078041*^9, 3.866046918967865*^9, 
+   3.866046981650087*^9},
  CellLabel->
   "During evaluation of \
-In[608]:=",ExpressionUUID->"d57f48d4-9b8c-40b2-8b02-8c98428007a9"],
+In[27]:=",ExpressionUUID->"26369c29-53a5-4e00-8a73-2f41ad218d41"],
 
 Cell[BoxData["\<\"Calculations done, generating error plots\"\>"], "Print",
  CellChangeTimes->{
@@ -2451,10 +2473,14 @@ Cell[BoxData["\<\"Calculations done, generating error plots\"\>"], "Print",
    3.8660391342548056`*^9}, 3.866039295237141*^9, 3.8660393498365717`*^9, {
    3.866039406184245*^9, 3.8660394259613028`*^9}, {3.8660395019603567`*^9, 
    3.8660395630362787`*^9}, {3.8660396023505774`*^9, 3.8660397386955395`*^9}, 
-   3.8660398141762853`*^9},
+   3.8660397689121175`*^9, 3.8660399724116106`*^9, 3.866041078662662*^9, 
+   3.8660412701173167`*^9, 3.8660413695347733`*^9, 3.8660421631709633`*^9, 
+   3.866042286741334*^9, 3.866042745868378*^9, 3.8660463376214647`*^9, 
+   3.8660467110076704`*^9, 3.866046840078041*^9, 3.866046918967865*^9, 
+   3.866047026613085*^9},
  CellLabel->
   "During evaluation of \
-In[608]:=",ExpressionUUID->"645c3148-635c-4043-98ba-456275b52b0c"],
+In[27]:=",ExpressionUUID->"6d6e4e9c-9da4-4704-8201-aff4ea55e5ee"],
 
 Cell[BoxData["\<\"Done\"\>"], "Print",
  CellChangeTimes->{
@@ -2484,26 +2510,30 @@ Cell[BoxData["\<\"Done\"\>"], "Print",
    3.8660391342548056`*^9}, 3.866039295237141*^9, 3.8660393498365717`*^9, {
    3.866039406184245*^9, 3.8660394259613028`*^9}, {3.8660395019603567`*^9, 
    3.8660395630362787`*^9}, {3.8660396023505774`*^9, 3.8660397386955395`*^9}, 
-   3.8660398547541833`*^9},
+   3.8660397689121175`*^9, 3.8660399724116106`*^9, 3.866041078662662*^9, 
+   3.8660412701173167`*^9, 3.8660413695347733`*^9, 3.8660421631709633`*^9, 
+   3.866042286741334*^9, 3.866042745868378*^9, 3.8660463376214647`*^9, 
+   3.8660467110076704`*^9, 3.866046840078041*^9, 3.866046918967865*^9, 
+   3.8660470672692084`*^9},
  CellLabel->
   "During evaluation of \
-In[608]:=",ExpressionUUID->"6c6d64bb-ce2e-4aba-ba9b-91285cfa093b"]
+In[27]:=",ExpressionUUID->"de6abef2-e03c-482e-8042-09afc9d987d5"]
 }, Open  ]],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`i$$ = 2, Typeset`show$$ = True, 
+   DynamicModuleBox[{$CellContext`i$$ = 7903, Typeset`show$$ = True, 
     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{
       Hold[$CellContext`i$$], 2, 7903, 1}}, Typeset`size$$ = {
     720., {261., 273.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True, $CellContext`i$7588625$$ = 0}, 
+    Typeset`skipInitDone$$ = True, $CellContext`i$8753$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, "Variables" :> {$CellContext`i$$ = 2}, 
       "ControllerVariables" :> {
-        Hold[$CellContext`i$$, $CellContext`i$7588625$$, 0]}, 
+        Hold[$CellContext`i$$, $CellContext`i$8753$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -2512,16 +2542,17 @@ Cell[BoxData[
         Plot[
          Apply[$CellContext`exactContact, 
           $CellContext`generateExactParams[$CellContext`v, 
-           Part[$CellContext`t, $CellContext`i$$], 100, "Copper", 
-           "Copper"]], {$CellContext`v, Min[$CellContext`x] + 1, 
-          Max[$CellContext`x]}, PlotStyle -> Red, PlotRange -> {0, 100 1.1}, 
+           Part[$CellContext`t$7708, $CellContext`i$$], 100, "Copper", 
+           "Copper"]], {$CellContext`v, Min[$CellContext`x$7708] + 1, 
+          Max[$CellContext`x$7708]}, PlotStyle -> Red, 
+         PlotRange -> {0, 100 1.1}, 
          AxesLabel -> {"x, cm", "u(x), \[Degree]C"}, PlotLabel -> 
          StringJoin["t = ", 
            ToString[
-            Part[$CellContext`t, $CellContext`i$$]], " s \n"]], 
+            Part[$CellContext`t$7708, $CellContext`i$$]], " s \n"]], 
         ListLinePlot[
-         Transpose[{$CellContext`x, 
-           Part[$CellContext`\[Xi], $CellContext`i$$]}]], Epilog -> Inset[
+         Transpose[{$CellContext`x$7708, 
+           Part[$CellContext`\[Xi]$7708, $CellContext`i$$]}]], Epilog -> Inset[
           Framed[
            Column[{
              LineLegend[{Blue}, {"Numeric solution"}], 
@@ -2541,36 +2572,42 @@ Cell[BoxData[
    Deployed->True,
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{3.8660398556492624`*^9},
- CellLabel->
-  "Out[615]=",ExpressionUUID->"37cdcae6-e511-49f0-9eb8-a0734b81a415"],
+ CellChangeTimes->{3.8660398556492624`*^9, 3.866040046789055*^9, 
+  3.866041154872373*^9, 3.8660413456167297`*^9, 3.8660414459374704`*^9, 
+  3.866042251713676*^9, 3.866042377259872*^9, 3.8660427513914003`*^9, 
+  3.8660464263238645`*^9, 3.8660467987404013`*^9, 3.8660468436042385`*^9, 
+  3.8660469189908657`*^9, 3.8660470682862034`*^9},
+ CellLabel->"Out[34]=",ExpressionUUID->"2f9cf457-44d6-4026-bcbb-064eb683c479"],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`j$$ = 459, Typeset`show$$ = True, 
+   DynamicModuleBox[{$CellContext`j$$ = 7898, Typeset`show$$ = True, 
     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{
       Hold[$CellContext`j$$], 2, 7898, 1}}, Typeset`size$$ = {
-    720., {229., 241.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True, $CellContext`j$7588649$$ = 0}, 
+    720., {260., 272.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`j$8777$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, "Variables" :> {$CellContext`j$$ = 2}, 
       "ControllerVariables" :> {
-        Hold[$CellContext`j$$, $CellContext`j$7588649$$, 0]}, 
+        Hold[$CellContext`j$$, $CellContext`j$8777$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
         Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
          Typeset`skipInitDone$$}, "Body" :> ListPlot[
-        Part[$CellContext`error$7587825, $CellContext`j$$], 
+        Part[$CellContext`err$7708, $CellContext`j$$], 
         AxesLabel -> {"x, cm", "Abs. error \[Degree]C"}, PlotRange -> {0, 
           Max[
-           Part[$CellContext`error$7587825, All, All, 2]]}], 
+           Part[$CellContext`err$7708, All, All, 2]]}, PlotLabel -> 
+        StringJoin["t = ", 
+          ToString[
+           Part[$CellContext`t$7708, $CellContext`j$$]], " s \n"]], 
       "Specifications" :> {{$CellContext`j$$, 2, 7898, 1}}, "Options" :> {}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{810., {310., 322.}},
+     ImageSizeCache->{810., {341., 353.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -2581,13 +2618,780 @@ Cell[BoxData[
    Deployed->True,
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{3.8660398557466803`*^9},
+ CellChangeTimes->{3.8660398556492624`*^9, 3.866040046789055*^9, 
+  3.866041154872373*^9, 3.8660413456167297`*^9, 3.8660414459374704`*^9, 
+  3.866042251713676*^9, 3.866042377259872*^9, 3.8660427513914003`*^9, 
+  3.8660464263238645`*^9, 3.8660467987404013`*^9, 3.8660468436042385`*^9, 
+  3.8660469189908657`*^9, 3.8660470684092045`*^9},
+ CellLabel->"Out[35]=",ExpressionUUID->"26e20902-4cea-41cd-959a-29772e36ea00"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Wood", "-", 
+    RowBox[{"Wood", " ", "contact"}]}], "*)"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"u0w", "=", "100"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Xmaxw", " ", "=", "20"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"hw", " ", "=", " ", "0.1"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Tw", "=", "20"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"material1w", " ", "=", " ", "\"\<Wood\>\""}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"material2w", " ", "=", " ", "\"\<Wood\>\""}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"mw", ",", "errorPltw"}], "}"}], "=", 
+     RowBox[{"getVisualization", "[", 
+      RowBox[{
+      "u0w", ",", "material1w", ",", " ", "material2w", ",", " ", "Xmaxw", 
+       ",", "Tw", ",", "hw"}], "]"}]}], ";"}], "\[IndentingNewLine]", "mw", 
+   "\[IndentingNewLine]", "errorPltw"}]}]], "Input",
+ CellChangeTimes->{{3.866042029143343*^9, 3.8660421047654376`*^9}, {
+   3.8660427567153006`*^9, 3.866042767538412*^9}, {3.8660463417852993`*^9, 
+   3.866046344481371*^9}, 3.866046610598837*^9, 3.8660467613494015`*^9},
+ CellLabel->"In[36]:=",ExpressionUUID->"dd84e4ef-9554-4940-a2b4-505375cf7abd"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\!\\(\\*SubscriptBox[\\(\[Kappa]\\), \\(1\\)]\\) = \"\>", 
+   "\[InvisibleSpace]", "0.004878048780487805`", 
+   "\[InvisibleSpace]", "\<\" \\!\\(\\*SubscriptBox[\\(\[Kappa]\\), \
+\\(2\\)]\\) = \"\>", "\[InvisibleSpace]", "0.004878048780487805`"}],
+  SequenceForm[
+  "\!\(\*SubscriptBox[\(\[Kappa]\), \(1\)]\) = ", 0.004878048780487805, 
+   " \!\(\*SubscriptBox[\(\[Kappa]\), \(2\)]\) = ", 0.004878048780487805],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.8660467988744025`*^9, 3.8660470691002035`*^9},
  CellLabel->
-  "Out[616]=",ExpressionUUID->"0c734dcf-05cb-4acf-b5fa-327e98679780"]
-}, Open  ]]
+  "During evaluation of \
+In[36]:=",ExpressionUUID->"ba4a7b26-34a2-46e4-a718-c97e9f7936a0"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\[Tau] = \"\>", "\[InvisibleSpace]", "0.6833333333333336`"}],
+  SequenceForm["\[Tau] = ", 0.6833333333333336],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.8660467988744025`*^9, 3.8660470691032047`*^9},
+ CellLabel->
+  "During evaluation of \
+In[36]:=",ExpressionUUID->"efc04b2e-1bea-4abb-b893-e28ef7df19b2"],
+
+Cell[BoxData["\<\"Calculations done, generating error plots\"\>"], "Print",
+ CellChangeTimes->{3.8660467988744025`*^9, 3.866047069276209*^9},
+ CellLabel->
+  "During evaluation of \
+In[36]:=",ExpressionUUID->"37de52c8-f062-4156-b9cf-9844addc38d8"],
+
+Cell[BoxData["\<\"Done\"\>"], "Print",
+ CellChangeTimes->{3.8660467988744025`*^9, 3.866047069335207*^9},
+ CellLabel->
+  "During evaluation of \
+In[36]:=",ExpressionUUID->"667a7931-b374-4f7a-91e2-d2c8278ba958"]
+}, Open  ]],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`i$$ = 31, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`i$$], 2, 31, 1}}, Typeset`size$$ = {
+    720., {261., 273.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`i$9161$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`i$$ = 2}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`i$$, $CellContext`i$9161$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Show[
+        Plot[
+         Apply[$CellContext`exactContact, 
+          $CellContext`generateExactParams[$CellContext`v, 
+           Part[$CellContext`t$9137, $CellContext`i$$], 100, "Wood", 
+           "Wood"]], {$CellContext`v, Min[$CellContext`x$9137] + 1, 
+          Max[$CellContext`x$9137]}, PlotStyle -> Red, 
+         PlotRange -> {0, 100 1.1}, 
+         AxesLabel -> {"x, cm", "u(x), \[Degree]C"}, PlotLabel -> 
+         StringJoin["t = ", 
+           ToString[
+            Part[$CellContext`t$9137, $CellContext`i$$]], " s \n"]], 
+        ListLinePlot[
+         Transpose[{$CellContext`x$9137, 
+           Part[$CellContext`\[Xi]$9137, $CellContext`i$$]}]], Epilog -> Inset[
+          Framed[
+           Column[{
+             LineLegend[{Blue}, {"Numeric solution"}], 
+             LineLegend[{Red}, {"Analytical solution"}]}], RoundingRadius -> 
+           5], 
+          Scaled[{0.2, 0.85}]]], 
+      "Specifications" :> {{$CellContext`i$$, 2, 31, 1}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{810., {342., 354.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.866046614447245*^9, 3.8660467991183996`*^9, 
+  3.8660470693582067`*^9},
+ CellLabel->"Out[43]=",ExpressionUUID->"d52ebbcd-331c-4a73-bfea-0c6539a6d04a"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`j$$ = 26, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`j$$], 2, 26, 1}}, Typeset`size$$ = {
+    720., {259., 271.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`j$9185$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`j$$ = 2}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`j$$, $CellContext`j$9185$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> ListPlot[
+        Part[$CellContext`err$9137, $CellContext`j$$], 
+        AxesLabel -> {"x, cm", "Abs. error \[Degree]C"}, PlotRange -> {0, 
+          Max[
+           Part[$CellContext`err$9137, All, All, 2]]}, PlotLabel -> 
+        StringJoin["t = ", 
+          ToString[
+           Part[$CellContext`t$9137, $CellContext`j$$]], " s \n"]], 
+      "Specifications" :> {{$CellContext`j$$, 2, 26, 1}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{810., {340., 352.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.866046614447245*^9, 3.8660467991183996`*^9, 
+  3.8660470694512095`*^9},
+ CellLabel->"Out[44]=",ExpressionUUID->"73c67fdd-2243-439c-bbcd-fa1e459d5280"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Copper", "-", 
+    RowBox[{"Wood", " ", "contact"}]}], "*)"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"u0cw", "=", "100"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Xmaxcw", " ", "=", "20"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"hcw", " ", "=", " ", "0.1"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Tcw", "=", "20"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"material1cw", " ", "=", " ", "\"\<Copper\>\""}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"material2cw", " ", "=", " ", "\"\<Wood\>\""}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"mcw", ",", "errorPltcw"}], "}"}], "=", 
+     RowBox[{"getVisualization", "[", 
+      RowBox[{
+      "u0cw", ",", "material1cw", ",", " ", "material2cw", ",", " ", "Xmaxcw",
+        ",", "Tcw", ",", "hcw"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   "mcw", "\[IndentingNewLine]", "errorPltcw"}]}]], "Input",
+ CellChangeTimes->{{3.866046545862557*^9, 3.8660465693204694`*^9}, {
+   3.866046620710374*^9, 3.8660466459284525`*^9}, 3.8660467592124004`*^9, 
+   3.8660471090499163`*^9},
+ CellLabel->"In[54]:=",ExpressionUUID->"524c3b61-4e06-421c-8863-d8c980d01a20"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\!\\(\\*SubscriptBox[\\(\[Kappa]\\), \\(1\\)]\\) = \"\>", 
+   "\[InvisibleSpace]", "1.3169022592726836`", 
+   "\[InvisibleSpace]", "\<\" \\!\\(\\*SubscriptBox[\\(\[Kappa]\\), \
+\\(2\\)]\\) = \"\>", "\[InvisibleSpace]", "0.004878048780487805`"}],
+  SequenceForm[
+  "\!\(\*SubscriptBox[\(\[Kappa]\), \(1\)]\) = ", 1.3169022592726836`, 
+   " \!\(\*SubscriptBox[\(\[Kappa]\), \(2\)]\) = ", 0.004878048780487805],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.8660467991804023`*^9, {3.866047093187271*^9, 3.866047111434388*^9}},
+ CellLabel->
+  "During evaluation of \
+In[54]:=",ExpressionUUID->"32021d30-1cef-4434-9564-053821b06bb5"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\[Tau] = \"\>", "\[InvisibleSpace]", "0.0025311926605504588`"}],
+  SequenceForm["\[Tau] = ", 0.0025311926605504588`],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.8660467991804023`*^9, {3.866047093187271*^9, 3.8660471114373894`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[54]:=",ExpressionUUID->"4591aaad-de91-4c24-b47d-ef9fb8f0db6d"],
+
+Cell[BoxData["\<\"Calculations done, generating error plots\"\>"], "Print",
+ CellChangeTimes->{3.8660467991804023`*^9, 3.866047093187271*^9, 
+  3.866047129179391*^9},
+ CellLabel->
+  "During evaluation of \
+In[54]:=",ExpressionUUID->"20bc1a8a-ffee-48ed-929f-1411038b856e"],
+
+Cell[BoxData["\<\"Done\"\>"], "Print",
+ CellChangeTimes->{3.8660467991804023`*^9, 3.866047093187271*^9, 
+  3.8660471453223906`*^9},
+ CellLabel->
+  "During evaluation of \
+In[54]:=",ExpressionUUID->"2cac90e9-221e-4e32-b31f-c261c48d010e"]
+}, Open  ]],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`i$$ = 7812, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`i$$], 2, 7903, 1}}, Typeset`size$$ = {
+    720., {261., 273.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`i$19786$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`i$$ = 2}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`i$$, $CellContext`i$19786$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Show[
+        Plot[
+         Apply[$CellContext`exactContact, 
+          $CellContext`generateExactParams[$CellContext`v, 
+           Part[$CellContext`t$19115, $CellContext`i$$], 100, "Copper", 
+           "Wood"]], {$CellContext`v, Min[$CellContext`x$19115] + 1, 
+          Max[$CellContext`x$19115]}, PlotStyle -> Red, 
+         PlotRange -> {0, 100 1.1}, 
+         AxesLabel -> {"x, cm", "u(x), \[Degree]C"}, PlotLabel -> 
+         StringJoin["t = ", 
+           ToString[
+            Part[$CellContext`t$19115, $CellContext`i$$]], " s \n"]], 
+        ListLinePlot[
+         Transpose[{$CellContext`x$19115, 
+           Part[$CellContext`\[Xi]$19115, $CellContext`i$$]}]], Epilog -> 
+        Inset[
+          Framed[
+           Column[{
+             LineLegend[{Blue}, {"Numeric solution"}], 
+             LineLegend[{Red}, {"Analytical solution"}]}], RoundingRadius -> 
+           5], 
+          Scaled[{0.2, 0.85}]]], 
+      "Specifications" :> {{$CellContext`i$$, 2, 7903, 1}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{810., {342., 354.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.8660468097054033`*^9, 3.86604710363927*^9, 
+  3.8660471456873875`*^9},
+ CellLabel->"Out[61]=",ExpressionUUID->"8229463b-8bad-4d94-8b51-5b55b9a90a66"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`j$$ = 7898, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`j$$], 2, 7898, 1}}, Typeset`size$$ = {
+    720., {259., 271.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`j$19810$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`j$$ = 2}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`j$$, $CellContext`j$19810$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> ListPlot[
+        Part[$CellContext`err$19115, $CellContext`j$$], 
+        AxesLabel -> {"x, cm", "Abs. error \[Degree]C"}, PlotRange -> {0, 
+          Max[
+           Part[$CellContext`err$19115, All, All, 2]]}, PlotLabel -> 
+        StringJoin["t = ", 
+          ToString[
+           Part[$CellContext`t$19115, $CellContext`j$$]], " s \n"]], 
+      "Specifications" :> {{$CellContext`j$$, 2, 7898, 1}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{810., {340., 352.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.8660468097054033`*^9, 3.86604710363927*^9, 
+  3.8660471457743907`*^9},
+ CellLabel->"Out[62]=",ExpressionUUID->"6ed824ac-8891-47f5-a8de-e03103aaa0d3"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Wood", "-", 
+    RowBox[{"Copper", " ", "contact"}]}], "*)"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"u0wc", "=", "100"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Xmaxwc", " ", "=", "20"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"hwc", "=", " ", "0.1"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Twc", "=", "20"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"material1wc", "=", " ", "\"\<Wood\>\""}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"material2wc", " ", "=", " ", "\"\<Copper\>\""}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"mwc", ",", "errorPltwc"}], "}"}], "=", 
+     RowBox[{"getVisualization", "[", 
+      RowBox[{
+      "u0wc", ",", "material1wc", ",", " ", "material2wc", ",", " ", "Xmaxwc",
+        ",", "Twc", ",", "hwc"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   "mwc", "\[IndentingNewLine]", "errorPltwc"}]}]], "Input",
+ CellChangeTimes->{{3.8660466525935497`*^9, 3.866046695334039*^9}, 
+   3.8660467566304007`*^9, 3.86604711948739*^9},
+ CellLabel->"In[63]:=",ExpressionUUID->"ba87d9be-2b72-41aa-a6ea-b280ccd7fd7f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\!\\(\\*SubscriptBox[\\(\[Kappa]\\), \\(1\\)]\\) = \"\>", 
+   "\[InvisibleSpace]", "0.004878048780487805`", 
+   "\[InvisibleSpace]", "\<\" \\!\\(\\*SubscriptBox[\\(\[Kappa]\\), \
+\\(2\\)]\\) = \"\>", "\[InvisibleSpace]", "1.3169022592726836`"}],
+  SequenceForm[
+  "\!\(\*SubscriptBox[\(\[Kappa]\), \(1\)]\) = ", 0.004878048780487805, 
+   " \!\(\*SubscriptBox[\(\[Kappa]\), \(2\)]\) = ", 1.3169022592726836`],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.8660468097443995`*^9, 3.8660471460143905`*^9},
+ CellLabel->
+  "During evaluation of \
+In[63]:=",ExpressionUUID->"18a817a9-db6d-4381-b9b9-e47dbc8948b0"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\[Tau] = \"\>", "\[InvisibleSpace]", "0.0025311926605504588`"}],
+  SequenceForm["\[Tau] = ", 0.0025311926605504588`],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.8660468097443995`*^9, 3.8660471460173917`*^9},
+ CellLabel->
+  "During evaluation of \
+In[63]:=",ExpressionUUID->"b0874ace-b4f1-489d-a7ac-5250c6da81bb"]
+}, Open  ]],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","munfl",
+   "\"\\!\\(\\*RowBox[{\\\"0.000012347281270977848`\\\", \\\" \\\", \
+\\\"4.120888422525229`*^-304\\\"}]\\) is too small to represent as a \
+normalized machine number; precision may be lost.\"",2,69,245,
+   17334859151550313535,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.8660467071172576`*^9, 3.8660468097484045`*^9, 
+  3.866047146358388*^9},
+ CellLabel->
+  "During evaluation of \
+In[63]:=",ExpressionUUID->"eddc071b-f06c-46c6-826d-731c9203bbdb"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","munfl",
+   "\"\\!\\(\\*RowBox[{\\\"0.000012347281270977848`\\\", \\\" \\\", \
+\\\"5.088176843923521`*^-307\\\"}]\\) is too small to represent as a \
+normalized machine number; precision may be lost.\"",2,69,246,
+   17334859151550313535,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.8660467071172576`*^9, 3.8660468097484045`*^9, 
+  3.8660471463933954`*^9},
+ CellLabel->
+  "During evaluation of \
+In[63]:=",ExpressionUUID->"b1764fb8-a463-438f-832c-01ce95b4db99"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","munfl",
+   "\"\\!\\(\\*RowBox[{\\\"0.000012347281270977848`\\\", \\\" \\\", \
+\\\"5.431014034631699`*^-305\\\"}]\\) is too small to represent as a \
+normalized machine number; precision may be lost.\"",2,69,247,
+   17334859151550313535,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.8660467071172576`*^9, 3.8660468097484045`*^9, 
+  3.8660471464003944`*^9},
+ CellLabel->
+  "During evaluation of \
+In[63]:=",ExpressionUUID->"3c720aa4-b704-4f4b-b737-8dd9f2436dc1"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"General\\\", \
+\\\"::\\\", \\\"munfl\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,69,248,17334859151550313535,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.8660467071172576`*^9, 3.8660468097484045`*^9, 
+  3.8660471464073944`*^9},
+ CellLabel->
+  "During evaluation of \
+In[63]:=",ExpressionUUID->"f45c2b62-035e-4bf2-8ec1-c0c85ab04b24"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"Calculations done, generating error plots\"\>"], "Print",
+ CellChangeTimes->{3.8660468097443995`*^9, 3.866047163753389*^9},
+ CellLabel->
+  "During evaluation of \
+In[63]:=",ExpressionUUID->"b5906017-d5fa-4b7c-83ac-23d67b3eeb61"],
+
+Cell[BoxData["\<\"Done\"\>"], "Print",
+ CellChangeTimes->{3.8660468097443995`*^9, 3.8660471799483876`*^9},
+ CellLabel->
+  "During evaluation of \
+In[63]:=",ExpressionUUID->"f4cb4fcb-6a5a-4dd4-8570-1b98952187b8"]
+}, Open  ]],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`i$$ = 7903, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`i$$], 2, 7903, 1}}, Typeset`size$$ = {
+    720., {261., 273.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`i$20321$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`i$$ = 2}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`i$$, $CellContext`i$20321$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Show[
+        Plot[
+         Apply[$CellContext`exactContact, 
+          $CellContext`generateExactParams[$CellContext`v, 
+           Part[$CellContext`t$20022, $CellContext`i$$], 100, "Wood", 
+           "Copper"]], {$CellContext`v, Min[$CellContext`x$20022] + 1, 
+          Max[$CellContext`x$20022]}, PlotStyle -> Red, 
+         PlotRange -> {0, 100 1.1}, 
+         AxesLabel -> {"x, cm", "u(x), \[Degree]C"}, PlotLabel -> 
+         StringJoin["t = ", 
+           ToString[
+            Part[$CellContext`t$20022, $CellContext`i$$]], " s \n"]], 
+        ListLinePlot[
+         Transpose[{$CellContext`x$20022, 
+           Part[$CellContext`\[Xi]$20022, $CellContext`i$$]}]], Epilog -> 
+        Inset[
+          Framed[
+           Column[{
+             LineLegend[{Blue}, {"Numeric solution"}], 
+             LineLegend[{Red}, {"Analytical solution"}]}], RoundingRadius -> 
+           5], 
+          Scaled[{0.2, 0.85}]]], 
+      "Specifications" :> {{$CellContext`i$$, 2, 7903, 1}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{810., {342., 354.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.866046707122265*^9, 3.8660468199783993`*^9, 
+  3.866047180302388*^9},
+ CellLabel->"Out[70]=",ExpressionUUID->"c4687129-73ef-4bec-bbb0-513a331ace66"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`j$$ = 7898, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`j$$], 2, 7898, 1}}, Typeset`size$$ = {
+    720., {259., 271.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`j$20345$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`j$$ = 2}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`j$$, $CellContext`j$20345$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> ListPlot[
+        Part[$CellContext`err$20022, $CellContext`j$$], 
+        AxesLabel -> {"x, cm", "Abs. error \[Degree]C"}, PlotRange -> {0, 
+          Max[
+           Part[$CellContext`err$20022, All, All, 2]]}, PlotLabel -> 
+        StringJoin["t = ", 
+          ToString[
+           Part[$CellContext`t$20022, $CellContext`j$$]], " s \n"]], 
+      "Specifications" :> {{$CellContext`j$$, 2, 7898, 1}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{810., {340., 352.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.866046707122265*^9, 3.8660468199783993`*^9, 
+  3.866047180392394*^9},
+ CellLabel->"Out[71]=",ExpressionUUID->"a42b48a2-5eda-4721-b2e8-6bd82319e187"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Granite", "-", 
+    RowBox[{"Wood", " ", "contact"}]}], "*)"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"u0gw", "=", "100"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Xmaxgw", " ", "=", "20"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"hgw", "=", " ", "0.01"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Tgw", "=", "20"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"material1gw", "=", " ", "\"\<Granite\>\""}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"material2gw", " ", "=", " ", "\"\<Wood\>\""}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"mgw", ",", "errorPltgw"}], "}"}], "=", 
+     RowBox[{"getVisualization", "[", 
+      RowBox[{
+      "u0gw", ",", "material1gw", ",", " ", "material2gw", ",", " ", "Xmaxgw",
+        ",", "Tgw", ",", "hgw"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   "mgw", "\[IndentingNewLine]", "errorPltgw"}]}]], "Input",
+ CellChangeTimes->{{3.8660467376104*^9, 3.8660467976964006`*^9}, {
+  3.8660471590143895`*^9, 3.8660471659753885`*^9}, {3.8660472054609137`*^9, 
+  3.866047272866678*^9}},
+ CellLabel->
+  "In[126]:=",ExpressionUUID->"0f33012b-f165-4d63-9740-a5900e3f458c"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\!\\(\\*SubscriptBox[\\(\[Kappa]\\), \\(1\\)]\\) = \"\>", 
+   "\[InvisibleSpace]", "0.010989010989010988`", 
+   "\[InvisibleSpace]", "\<\" \\!\\(\\*SubscriptBox[\\(\[Kappa]\\), \
+\\(2\\)]\\) = \"\>", "\[InvisibleSpace]", "0.004878048780487805`"}],
+  SequenceForm[
+  "\!\(\*SubscriptBox[\(\[Kappa]\), \(1\)]\) = ", 0.010989010989010988`, 
+   " \!\(\*SubscriptBox[\(\[Kappa]\), \(2\)]\) = ", 0.004878048780487805],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.8660471936889277`*^9, 3.8660472730807533`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[126]:=",ExpressionUUID->"17f76026-aea5-434f-ba28-62181ff44b92"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\[Tau] = \"\>", "\[InvisibleSpace]", "0.003033333333333334`"}],
+  
+  SequenceForm["\[Tau] = ", 0.003033333333333334],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.8660471936889277`*^9, 3.8660472730837526`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[126]:=",ExpressionUUID->"48716a61-61a1-44f6-b1a8-75f1d9e4d388"],
+
+Cell[BoxData[
+ DynamicBox[ToBoxes[
+   ProgressIndicator[$CellContext`i$32108/$CellContext`m$32108], StandardForm],
+  Evaluator->"Local",
+  ImageSizeCache->{400., {3., 13.}}]], "PrintTemporary",
+ CellChangeTimes->{3.8660472744817533`*^9},
+ CellLabel->
+  "During evaluation of \
+In[126]:=",ExpressionUUID->"9f7c0ed9-1984-4087-8cbf-1b12e057cf9d"]
+}, Open  ]],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","munfl",
+   "\"\\!\\(\\*RowBox[{\\\"0.00003333333333333334`\\\", \\\" \\\", \
+\\\"4.3893173268742886`*^-304\\\"}]\\) is too small to represent as a \
+normalized machine number; precision may be lost.\"",2,132,257,
+   17334859151550313535,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.8660472888237514`*^9},
+ CellLabel->
+  "During evaluation of \
+In[126]:=",ExpressionUUID->"864f9b67-1a88-4194-bacb-0bc3ce425dfb"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","munfl",
+   "\"\\!\\(\\*RowBox[{\\\"0.00003333333333333334`\\\", \\\" \\\", \
+\\\"1.4631057756247633`*^-304\\\"}]\\) is too small to represent as a \
+normalized machine number; precision may be lost.\"",2,132,258,
+   17334859151550313535,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.86604728885275*^9},
+ CellLabel->
+  "During evaluation of \
+In[126]:=",ExpressionUUID->"4e29e355-63e9-44b9-9af3-24800a0b4f95"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","munfl",
+   "\"\\!\\(\\*RowBox[{\\\"0.00003333333333333334`\\\", \\\" \\\", \
+\\\"4.877019252082546`*^-305\\\"}]\\) is too small to represent as a \
+normalized machine number; precision may be lost.\"",2,132,259,
+   17334859151550313535,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.866047288885751*^9},
+ CellLabel->
+  "During evaluation of \
+In[126]:=",ExpressionUUID->"77ba962d-6bd6-4f8a-8e42-25411491e5ad"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"General\\\", \
+\\\"::\\\", \\\"munfl\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,132,260,17334859151550313535,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.8660472888917522`*^9},
+ CellLabel->
+  "During evaluation of \
+In[126]:=",ExpressionUUID->"e24783c3-eb9f-4cc7-bec8-25a91785a560"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.8660472612105193`*^9, 
+  3.8660472628015213`*^9}},ExpressionUUID->"aee36c79-552b-404f-856b-\
+7135a7e1979c"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Wood", "-", 
+    RowBox[{"Granite", " ", "contact"}]}], "*)"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"u0wg", "=", "100"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Xmaxwg", " ", "=", "20"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"hwg", "=", " ", "0.01"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Twg", "=", "20"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"material1wg", "=", " ", "\"\<Granite\>\""}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"material2wg", "=", " ", "\"\<Wood\>\""}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"mwg", ",", "errorPltwg"}], "}"}], "=", 
+     RowBox[{"getVisualization", "[", 
+      RowBox[{
+      "u0wg", ",", "material1wg", ",", " ", "material2wg", ",", " ", "Xmaxwg",
+        ",", "Twg", ",", "hwg"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   "mwg", "\[IndentingNewLine]", "errorPltwg"}]}]], "Input",
+ CellChangeTimes->{{3.8660468063064003`*^9, 3.8660468199514*^9}, {
+  3.866047167759392*^9, 3.8660471711853905`*^9}, {3.866047210980009*^9, 
+  3.8660472223729773`*^9}, {3.866047290619752*^9, 
+  3.866047331832752*^9}},ExpressionUUID->"d96dc153-502c-4a54-820c-\
+1ca1181fcd4b"]
 },
-WindowSize->{1680, 959},
-WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+WindowSize->{1664, 959},
+WindowMargins->{{-8, Automatic}, {Automatic, 0}},
 Magnification:>2. Inherited,
 FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
@@ -2603,22 +3407,75 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 12098, 276, 1980, "Input",ExpressionUUID->"40277687-c645-4ce0-b8c3-de288b0d64e5"],
-Cell[12659, 298, 2542, 62, 441, "Input",ExpressionUUID->"e7fd83da-bb04-411a-9a6f-2ebcbeb4a763"],
-Cell[15204, 362, 101315, 1667, 373, "Text",ExpressionUUID->"3f30d685-8cd8-40fd-989a-5674cf196b7f"],
-Cell[116522, 2031, 2580, 60, 448, "Input",ExpressionUUID->"625ec117-9082-4ef4-abd8-712ea5b44329"],
-Cell[119105, 2093, 8097, 179, 1097, "Input",ExpressionUUID->"de845ac5-083c-4567-b3ff-f0a155014b14"],
+Cell[558, 20, 12099, 276, 1980, "Input",ExpressionUUID->"40277687-c645-4ce0-b8c3-de288b0d64e5"],
+Cell[12660, 298, 2543, 62, 441, "Input",ExpressionUUID->"e7fd83da-bb04-411a-9a6f-2ebcbeb4a763"],
+Cell[15206, 362, 101315, 1667, 373, "Text",ExpressionUUID->"3f30d685-8cd8-40fd-989a-5674cf196b7f"],
+Cell[116524, 2031, 2581, 60, 505, "Input",ExpressionUUID->"625ec117-9082-4ef4-abd8-712ea5b44329"],
+Cell[119108, 2093, 8651, 189, 1111, "Input",ExpressionUUID->"de845ac5-083c-4567-b3ff-f0a155014b14"],
 Cell[CellGroupData[{
-Cell[127227, 2276, 3835, 66, 395, "Input",ExpressionUUID->"4e55d62b-5e5d-4d58-9bf7-0a394651132e"],
+Cell[127784, 2286, 4171, 70, 409, "Input",ExpressionUUID->"4e55d62b-5e5d-4d58-9bf7-0a394651132e"],
 Cell[CellGroupData[{
-Cell[131087, 2346, 2546, 40, 44, "Print",ExpressionUUID->"7c0b8acf-a94b-403e-a6d5-c852fb32dfaa"],
-Cell[133636, 2388, 2257, 35, 44, "Print",ExpressionUUID->"d57f48d4-9b8c-40b2-8b02-8c98428007a9"],
-Cell[135896, 2425, 2136, 31, 44, "Print",ExpressionUUID->"645c3148-635c-4043-98ba-456275b52b0c"],
-Cell[138035, 2458, 2099, 31, 44, "Print",ExpressionUUID->"6c6d64bb-ce2e-4aba-ba9b-91285cfa093b"]
+Cell[131980, 2360, 2839, 44, 44, "Print",ExpressionUUID->"03c8567b-fa48-46a7-bafd-fa1258e41b0e"],
+Cell[134822, 2406, 2548, 39, 44, "Print",ExpressionUUID->"26369c29-53a5-4e00-8a73-2f41ad218d41"],
+Cell[137373, 2447, 2427, 35, 44, "Print",ExpressionUUID->"6d6e4e9c-9da4-4704-8201-aff4ea55e5ee"],
+Cell[139803, 2484, 2392, 35, 44, "Print",ExpressionUUID->"de6abef2-e03c-482e-8042-09afc9d987d5"]
 }, Open  ]],
-Cell[140149, 2492, 2497, 53, 757, "Output",ExpressionUUID->"37cdcae6-e511-49f0-9eb8-a0734b81a415"],
-Cell[142649, 2547, 1850, 38, 726, "Output",ExpressionUUID->"0c734dcf-05cb-4acf-b5fa-327e98679780"]
-}, Open  ]]
+Cell[142210, 2522, 2822, 57, 757, "Output",ExpressionUUID->"2f9cf457-44d6-4026-bcbb-064eb683c479"],
+Cell[145035, 2581, 2252, 44, 755, "Output",ExpressionUUID->"26e20902-4cea-41cd-959a-29772e36ea00"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[147324, 2630, 1357, 33, 448, "Input",ExpressionUUID->"dd84e4ef-9554-4940-a2b4-505375cf7abd"],
+Cell[CellGroupData[{
+Cell[148706, 2667, 664, 13, 44, "Print",ExpressionUUID->"ba4a7b26-34a2-46e4-a718-c97e9f7936a0"],
+Cell[149373, 2682, 362, 8, 44, "Print",ExpressionUUID->"efc04b2e-1bea-4abb-b893-e28ef7df19b2"],
+Cell[149738, 2692, 246, 4, 44, "Print",ExpressionUUID->"37de52c8-f062-4156-b9cf-9844addc38d8"],
+Cell[149987, 2698, 209, 4, 44, "Print",ExpressionUUID->"667a7931-b374-4f7a-91e2-d2c8278ba958"]
+}, Open  ]],
+Cell[150211, 2705, 2569, 54, 757, "Output",ExpressionUUID->"d52ebbcd-331c-4a73-bfea-0c6539a6d04a"],
+Cell[152783, 2761, 2003, 41, 753, "Output",ExpressionUUID->"73c67fdd-2243-439c-bbcd-fa1e459d5280"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[154823, 2807, 1331, 33, 448, "Input",ExpressionUUID->"524c3b61-4e06-421c-8863-d8c980d01a20"],
+Cell[CellGroupData[{
+Cell[156179, 2844, 686, 14, 44, "Print",ExpressionUUID->"32021d30-1cef-4434-9564-053821b06bb5"],
+Cell[156868, 2860, 396, 9, 44, "Print",ExpressionUUID->"4591aaad-de91-4c24-b47d-ef9fb8f0db6d"],
+Cell[157267, 2871, 271, 5, 44, "Print",ExpressionUUID->"20bc1a8a-ffee-48ed-929f-1411038b856e"],
+Cell[157541, 2878, 236, 5, 44, "Print",ExpressionUUID->"2cac90e9-221e-4e32-b31f-c261c48d010e"]
+}, Open  ]],
+Cell[157792, 2886, 2593, 55, 757, "Output",ExpressionUUID->"8229463b-8bad-4d94-8b51-5b55b9a90a66"],
+Cell[160388, 2943, 2013, 41, 753, "Output",ExpressionUUID->"6ed824ac-8891-47f5-a8de-e03103aaa0d3"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[162438, 2989, 1266, 32, 448, "Input",ExpressionUUID->"ba87d9be-2b72-41aa-a6ea-b280ccd7fd7f"],
+Cell[CellGroupData[{
+Cell[163729, 3025, 661, 13, 44, "Print",ExpressionUUID->"18a817a9-db6d-4381-b9b9-e47dbc8948b0"],
+Cell[164393, 3040, 369, 8, 44, "Print",ExpressionUUID->"b0874ace-b4f1-489d-a7ac-5250c6da81bb"]
+}, Open  ]],
+Cell[164777, 3051, 526, 12, 46, "Message",ExpressionUUID->"eddc071b-f06c-46c6-826d-731c9203bbdb"],
+Cell[165306, 3065, 528, 12, 46, "Message",ExpressionUUID->"b1764fb8-a463-438f-832c-01ce95b4db99"],
+Cell[165837, 3079, 528, 12, 46, "Message",ExpressionUUID->"3c720aa4-b704-4f4b-b737-8dd9f2436dc1"],
+Cell[166368, 3093, 500, 11, 46, "Message",ExpressionUUID->"f45c2b62-035e-4bf2-8ec1-c0c85ab04b24"],
+Cell[CellGroupData[{
+Cell[166893, 3108, 246, 4, 44, "Print",ExpressionUUID->"b5906017-d5fa-4b7c-83ac-23d67b3eeb61"],
+Cell[167142, 3114, 211, 4, 44, "Print",ExpressionUUID->"f4cb4fcb-6a5a-4dd4-8570-1b98952187b8"]
+}, Open  ]],
+Cell[167368, 3121, 2592, 55, 757, "Output",ExpressionUUID->"c4687129-73ef-4bec-bbb0-513a331ace66"],
+Cell[169963, 3178, 2012, 41, 753, "Output",ExpressionUUID->"a42b48a2-5eda-4721-b2e8-6bd82319e187"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[172012, 3224, 1326, 34, 473, "Input",ExpressionUUID->"0f33012b-f165-4d63-9740-a5900e3f458c"],
+Cell[CellGroupData[{
+Cell[173363, 3262, 668, 13, 44, "Print",ExpressionUUID->"17f76026-aea5-434f-ba28-62181ff44b92"],
+Cell[174034, 3277, 372, 9, 44, "Print",ExpressionUUID->"48716a61-61a1-44f6-b1a8-75f1d9e4d388"],
+Cell[174409, 3288, 343, 8, 44, "PrintTemporary",ExpressionUUID->"9f7c0ed9-1984-4087-8cbf-1b12e057cf9d"]
+}, Open  ]],
+Cell[174767, 3299, 479, 11, 46, "Message",ExpressionUUID->"864f9b67-1a88-4194-bacb-0bc3ce425dfb"],
+Cell[175249, 3312, 476, 11, 46, "Message",ExpressionUUID->"4e29e355-63e9-44b9-9af3-24800a0b4f95"],
+Cell[175728, 3325, 476, 11, 46, "Message",ExpressionUUID->"77ba962d-6bd6-4f8a-8e42-25411491e5ad"],
+Cell[176207, 3338, 451, 10, 46, "Message",ExpressionUUID->"e24783c3-eb9f-4cc7-bec8-25a91785a560"]
+}, Open  ]],
+Cell[176673, 3351, 156, 3, 57, "Input",ExpressionUUID->"aee36c79-552b-404f-856b-7135a7e1979c"],
+Cell[176832, 3356, 1342, 34, 448, "Input",ExpressionUUID->"d96dc153-502c-4a54-820c-1ca1181fcd4b"]
 }
 ]
 *)
